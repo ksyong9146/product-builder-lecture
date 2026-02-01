@@ -121,3 +121,9 @@ header p {
 .hidden {
     display: none;
 }
+
+.ad-container {
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 728px; /* Typical leaderboard ad size */
+}

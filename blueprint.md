@@ -10,7 +10,8 @@ This is a web application that uses a pre-trained machine learning model from Te
 *   **Image Upload:** Users can upload an image from their device to be classified.
 *   **Dynamic Results:** The application displays the classification results with probabilities for each category ("Dog" or "Cat").
 *   **Responsive Design:** The user interface is designed to work on both desktop and mobile devices.
+*   **Google AdSense Integration:** Includes Google AdSense for monetization, with a placeholder ad unit.
 
 ## Current Plan
 
-The application is complete with image upload functionality. The next step is to deploy it.
+The application is complete with Google AdSense integration. The next step is to deploy it.
