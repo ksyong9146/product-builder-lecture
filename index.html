@@ -3,63 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Animal Face Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero-section">
-        <div class="container">
-            <h1>Lotto Number Generator</h1>
-            <p>Your lucky numbers are just a click away.</p>
-            <div class="lotto-numbers">
+    <div class="container">
+        <header>
+            <h1>Which Animal Do You Look Like?</h1>
+            <p>Upload a photo or use your webcam to find out if you have a dog or a cat face!</p>
+        </header>
+        
+        <main>
+            <div class="controls">
+                <button id="webcam-btn">Use Webcam</button>
+                <input type="file" id="upload-btn" accept="image/*" style="display: none;">
+                <label for="upload-btn" class="upload-label">Upload Image</label>
             </div>
-            <button id="generate-btn">Generate Numbers</button>
-        </div>
+
+            <div id="webcam-container"></div>
+            <img id="image-preview" src="#" alt="Image preview" class="hidden"/>
+            
+            <div id="loader" class="hidden"></div>
+            <div id="result-container" class="hidden">
+                <h2>Result:</h2>
+                <div id="label-container"></div>
+            </div>
+        </main>
     </div>
 
-    <div class="partnership-section">
-        <button id="open-modal-btn">Partnership Inquiry</button>
-    </div>
-
-    <div id="contact-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/mnjznvgz" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script src="main.js"></script>
-
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-
-        var disqus_config = function () {
-            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'lotto-generator-page'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://product-builder-a.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>

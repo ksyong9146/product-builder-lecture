@@ -1,132 +1,123 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    background-color: #121212;
-    color: #ffffff;
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #10b981;
+    --background-color: #f9fafb;
+    --text-color: #1f2937;
+    --container-bg-color: #ffffff;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.hero-section {
-    background-image: url('https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/brand-philosophy/1_our-values_kv_pc.jpg?$1920_1080_JPG$');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 15px;
+    background-color: var(--container-bg-color);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    padding: 2rem 3rem;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
-h1 {
-    font-size: 3rem;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#webcam-btn, .upload-label {
+    background-image: linear-gradient(to right, var(--primary-color), #60a5fa);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+#webcam-btn:hover, .upload-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 10px rgba(59, 130, 246, 0.3);
+}
+
+#webcam-container, #image-preview {
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#result-container {
+    margin-top: 2rem;
+}
+
+#result-container h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
-.lotto-numbers {
+.result-item {
+    background-color: #ecfdf5;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
     display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.lotto-ball {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #333;
-    border: 2px solid #555;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 10px;
-    color: #fff;
 }
 
-#generate-btn, #open-modal-btn {
-    background-color: #007bff;
+.result-item.highlight {
+    background-color: var(--secondary-color);
     color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
 }
 
-#generate-btn:hover, #open-modal-btn:hover {
-    background-color: #0056b3;
+#loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid var(--primary-color);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
 }
 
-.partnership-section {
-    text-align: center;
-    padding: 50px 0;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.modal {
+.hidden {
     display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-    background-color: #2c2c2c;
-    margin: 15% auto;
-    padding: 30px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    position: relative;
-}
-
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover, .close-btn:focus {
-    color: #fff;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #555;
-    background-color: #333;
-    color: #fff;
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
 }

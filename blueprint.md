@@ -1,27 +1,17 @@
-# 로또 번호 생성기
+# Animal Face Test
 
-이 프로젝트는 무작위 로또 번호를 생성하는 간단한 웹 애플리케이션입니다.
+## Overview
 
-## 기능
+This is a web application that uses a pre-trained machine learning model from Teachable Machine to determine if a person's face is more "dog-like" or "cat-like". Users can either upload a photo of themselves or use their webcam for a real-time prediction.
 
-* 1부터 45까지의 6개의 고유한 무작위 숫자 생성.
-* 생성된 번호를 시각적으로 보기 좋게 표시.
-* 버튼 클릭으로 새로운 번호를 생성하는 기능.
-* '제휴 문의' 버튼을 클릭하면 모달 창으로 문의 양식 제공.
+## Features
 
-## 계획
+*   **Machine Learning Model Integration:** Utilizes a Teachable Machine model to classify images.
+*   **Image Upload:** Users can upload an image from their device to be classified.
+*   **Webcam Support:** Users can use their webcam to get real-time classification of their face.
+*   **Dynamic Results:** The application displays the classification results with probabilities for each category ("Dog" or "Cat").
+*   **Responsive Design:** The user interface is designed to work on both desktop and mobile devices.
 
-### v2: 모달 문의 양식을 포함한 리디자인
+## Current Plan
 
-*   **`index.html`**: 메인 콘텐츠(로또 생성기)와 문의 양식을 분리하도록 HTML 구조 변경. 문의 양식은 처음에는 숨겨진 모달 구조 안에 배치.
-*   **`style.css`**: UI를 더 현대적이고 깔끔하게 리디자인. 배경 이미지를 추가하고 모달 오버레이와 문의 양식 자체에 대한 스타일을 적용. 전체적인 미관은 제공된 삼성 웹사이트 스크린샷에서 영감을 얻음.
-*   **`main.js`**: '제휴 문의' 버튼을 클릭했을 때 문의 양식 모달을 표시하고 숨기는 기능 구현.
-
-### v1: 초기 구현
-
-*   **`index.html`**: 웹 페이지의 주요 구조 생성. 제목, 로또 번호를 담을 컨테이너, 번호 생성을 트리거할 버튼 포함.
-*   **`style.css`**: 깔끔하고 현대적인 사용자 인터페이스를 만들기 위해 요소들을 스타일링. 숫자 공, 버튼, 전체 레이아웃 스타일링 포함.
-*   **`main.js`**: 무작위 번호 생성을 위한 로직 구현.
-    *   6개의 고유한 무작위 번호를 생성하는 함수 생성.
-    *   생성 함수를 호출하기 위해 버튼에 이벤트 리스너 추가.
-    *   새로 생성된 번호를 표시하기 위해 DOM 업데이트.
+The application is complete. The next step is to deploy it.
