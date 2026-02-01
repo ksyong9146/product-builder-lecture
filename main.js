@@ -48,25 +48,35 @@ async function predict(image) {
     let highestProb = 0;
     let highestClass = '';
 
-    labelContainer.innerHTML = '';
     for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction = prediction[i].className + ': ' + (prediction[i].probability * 100).toFixed(1) + '%';
-        const resultItem = document.createElement('div');
-        resultItem.className = 'result-item';
-        
-        if(prediction[i].probability > highestProb) {
+        if (prediction[i].probability > highestProb) {
             highestProb = prediction[i].probability;
             highestClass = prediction[i].className;
         }
-        
-        labelContainer.appendChild(resultItem);
     }
     
-    // Display the best result prominently
-    const finalResultItem = document.createElement('div');
-    finalResultItem.className = 'result-item highlight';
-    finalResultItem.innerHTML = `You are a ${highestClass} person! (${(highestProb * 100).toFixed(1)}%)`;
-    labelContainer.prepend(finalResultItem); // Add at the beginning
+    labelContainer.innerHTML = ''; // Clear previous results
+
+    const resultTitle = document.createElement('h2');
+    resultTitle.style.color = "var(--secondary-color)";
+
+    const resultDescription = document.createElement('p');
+    resultDescription.style.fontSize = '1.1rem';
+    resultDescription.style.lineHeight = '1.7';
+
+    if (highestClass === 'Dog') {
+        resultTitle.innerHTML = `You're a Dog Person! (${(highestProb * 100).toFixed(1)}%)`;
+        resultDescription.innerHTML = `With features that suggest friendliness and loyalty, your face reflects a warm and approachable energy. People with "dog-like" faces are often seen as energetic, trustworthy, and great companions who bring joy to those around them.`;
+    } else if (highestClass === 'Cat') {
+        resultTitle.innerHTML = `You're a Cat Person! (${(highestProb * 100).toFixed(1)}%)`;
+        resultDescription.innerHTML = `Your facial features align with those of a cat, suggesting elegance, independence, and a hint of mystery. People with "cat-like" faces are often perceived as graceful, calm, highly perceptive, and in tune with their surroundings.`;
+    } else {
+        resultTitle.innerHTML = "Result";
+        resultDescription.innerHTML = "Could not determine a result. Please try another image.";
+    }
+
+    labelContainer.appendChild(resultTitle);
+    labelContainer.appendChild(resultDescription);
 }
 
 init();

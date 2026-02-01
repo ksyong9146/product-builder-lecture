@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Face Test</title>
+    <title>Animal Face Test - What Animal Do You Look Like?</title>
+    <meta name="description" content="Find out if you have a dog or a cat face with our fun AI-powered animal face test. Upload your photo and discover your animal look-alike!">
     <meta name="google-adsense-account" content="ca-pub-9122179287924244">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9122179287924244"
      crossorigin="anonymous"></script>
@@ -11,40 +12,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Animal Face Test</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Which Animal Do You Look Like?</h1>
-            <p>Upload a photo or use your webcam to find out if you have a dog or a cat face!</p>
+            <p>Our AI analyzes your facial features to reveal your inner animal look-alike. Are you more of a loyal, friendly dog or a graceful, independent cat? Upload a photo to find out!</p>
         </header>
 
-        <div class="ad-container">
-            <!-- Animal Face Test Ad Unit -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-9122179287924244"
-                 data-ad-slot="YOUR_AD_SLOT_ID_HERE"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-        
         <main>
             <div class="controls">
                 <input type="file" id="upload-btn" accept="image/*" style="display: none;">
-                <label for="upload-btn" class="upload-label">Upload Image</label>
+                <label for="upload-btn" class="upload-label">Upload Your Photo</label>
             </div>
 
-            <img id="image-preview" src="#" alt="Image preview" class="hidden"/>
+            <img id="image-preview" src="#" alt="Upload a photo to see the result" class="hidden"/>
             
             <div id="loader" class="hidden"></div>
             <div id="result-container" class="hidden">
-                <h2>Result:</h2>
                 <div id="label-container"></div>
             </div>
         </main>
     </div>
+
+    <div class="ad-container">
+        <!-- Animal Face Test Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9122179287924244"
+             data-ad-slot="YOUR_AD_SLOT_ID_HERE"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
+    <div class="container content-page">
+        <section>
+            <h2>How It Works: The Magic of AI</h2>
+            <p>Our Animal Face Test uses a sophisticated artificial intelligence model called a "Convolutional Neural Network," which has been trained using Google's Teachable Machine platform. This model has analyzed thousands of images of dogs and cats to learn the subtle patterns and features that distinguish them, such as ear shape, eye spacing, and snout length. When you upload your picture, the AI compares your features to these learned patterns to calculate a probability. The entire process happens securely in your browser—we never see or save your photos.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Animal Face Test. All Rights Reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
