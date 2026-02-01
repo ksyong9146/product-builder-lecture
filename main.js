@@ -1,5 +1,6 @@
 const lottoNumbersContainer = document.querySelector('.lotto-numbers');
 const generateBtn = document.getElementById('generate-btn');
+const themeSwitch = document.getElementById('checkbox');
 
 const generateLottoNumbers = () => {
     const numbers = new Set();
@@ -18,6 +19,29 @@ const displayNumbers = (numbers) => {
         lottoNumbersContainer.appendChild(lottoBall);
     });
 };
+
+const switchTheme = (e) => {
+    if (e.target.checked) {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+themeSwitch.addEventListener('change', switchTheme, false);
+
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.body.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        themeSwitch.checked = true;
+    }
+}
+
 
 generateBtn.addEventListener('click', () => {
     const numbers = generateLottoNumbers();
