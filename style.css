@@ -48,7 +48,7 @@ header p {
     margin-bottom: 2rem;
 }
 
-#webcam-btn, .upload-label {
+.upload-label {
     background-image: linear-gradient(to right, var(--primary-color), #60a5fa);
     border: none;
     border-radius: 8px;
@@ -61,12 +61,12 @@ header p {
     box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
 }
 
-#webcam-btn:hover, .upload-label:hover {
+.upload-label:hover {
     transform: translateY(-2px);
     box-shadow: 0 7px 10px rgba(59, 130, 246, 0.3);
 }
 
-#webcam-container, #image-preview {
+#image-preview {
     border-radius: 12px;
     margin: 0 auto;
     width: 100%;
