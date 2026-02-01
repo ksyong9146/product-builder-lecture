@@ -1,6 +1,8 @@
 const lottoNumbersContainer = document.querySelector('.lotto-numbers');
 const generateBtn = document.getElementById('generate-btn');
-const themeSwitch = document.getElementById('checkbox');
+const modal = document.getElementById('contact-modal');
+const openModalBtn = document.getElementById('open-modal-btn');
+const closeModalBtn = document.querySelector('.close-btn');
 
 const generateLottoNumbers = () => {
     const numbers = new Set();
@@ -20,32 +22,23 @@ const displayNumbers = (numbers) => {
     });
 };
 
-const switchTheme = (e) => {
-    if (e.target.checked) {
-        document.body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        document.body.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-    }
-}
-
-themeSwitch.addEventListener('change', switchTheme, false);
-
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-    document.body.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-        themeSwitch.checked = true;
-    }
-}
-
-
 generateBtn.addEventListener('click', () => {
     const numbers = generateLottoNumbers();
     displayNumbers(numbers);
+});
+
+openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'block';
+});
+
+closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
 });
 
 // Initial generation

@@ -1,19 +1,27 @@
+# 로또 번호 생성기
 
-# Lotto Number Generator
+이 프로젝트는 무작위 로또 번호를 생성하는 간단한 웹 애플리케이션입니다.
 
-This project is a simple web application that generates random lottery numbers.
+## 기능
 
-## Features
+* 1부터 45까지의 6개의 고유한 무작위 숫자 생성.
+* 생성된 번호를 시각적으로 보기 좋게 표시.
+* 버튼 클릭으로 새로운 번호를 생성하는 기능.
+* '제휴 문의' 버튼을 클릭하면 모달 창으로 문의 양식 제공.
 
-*   Generates 6 unique random numbers between 1 and 45.
-*   Displays the generated numbers in a visually appealing way.
-*   Allows the user to generate new numbers with the click of a button.
+## 계획
 
-## Plan
+### v2: 모달 문의 양식을 포함한 리디자인
 
-1.  **`index.html`**: Create the main structure of the web page, including a title, a container for the lottery numbers, and a button to trigger the number generation.
-2.  **`style.css`**: Style the elements to create a clean and modern user interface. This includes styling the number balls, the button, and the overall layout.
-3.  **`main.js`**: Implement the logic for generating the random numbers. This will involve:
-    *   Creating a function to generate 6 unique random numbers.
-    *   Adding an event listener to the button to call the generation function.
-    *   Updating the DOM to display the newly generated numbers.
+*   **`index.html`**: 메인 콘텐츠(로또 생성기)와 문의 양식을 분리하도록 HTML 구조 변경. 문의 양식은 처음에는 숨겨진 모달 구조 안에 배치.
+*   **`style.css`**: UI를 더 현대적이고 깔끔하게 리디자인. 배경 이미지를 추가하고 모달 오버레이와 문의 양식 자체에 대한 스타일을 적용. 전체적인 미관은 제공된 삼성 웹사이트 스크린샷에서 영감을 얻음.
+*   **`main.js`**: '제휴 문의' 버튼을 클릭했을 때 문의 양식 모달을 표시하고 숨기는 기능 구현.
+
+### v1: 초기 구현
+
+*   **`index.html`**: 웹 페이지의 주요 구조 생성. 제목, 로또 번호를 담을 컨테이너, 번호 생성을 트리거할 버튼 포함.
+*   **`style.css`**: 깔끔하고 현대적인 사용자 인터페이스를 만들기 위해 요소들을 스타일링. 숫자 공, 버튼, 전체 레이아웃 스타일링 포함.
+*   **`main.js`**: 무작위 번호 생성을 위한 로직 구현.
+    *   6개의 고유한 무작위 번호를 생성하는 함수 생성.
+    *   생성 함수를 호출하기 위해 버튼에 이벤트 리스너 추가.
+    *   새로 생성된 번호를 표시하기 위해 DOM 업데이트.
