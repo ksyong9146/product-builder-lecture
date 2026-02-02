@@ -3,51 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Animal Face Test</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>About Us - Animal Face Test | Our Mission and Story</title>
+    <meta name="description" content="Learn about Animal Face Test, our mission to create fun AI-powered experiences, and our commitment to user privacy and quality content.">
+    <meta name="keywords" content="about animal face test, AI face analysis team, machine learning entertainment">
+    <meta name="author" content="Animal Face Test">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://animalfacetest.com/about.html">
+    <meta property="og:title" content="About Us - Animal Face Test">
+    <meta property="og:description" content="Learn about our mission to create fun, private AI experiences.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Animal Face Test</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="about.html">About</a></li>
-                <li class="nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="nav-item"><a href="about.html" class="active">About</a></li>
+                <li class="nav-item"><a href="how-it-works.html">How It Works</a></li>
+                <li class="nav-item"><a href="dog-vs-cat.html">Dog vs Cat Faces</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <div class="page-header">
+        <div class="container">
+            <h1>About Animal Face Test</h1>
+            <p>Bringing AI technology to everyday entertainment</p>
+        </div>
+    </div>
+
     <div class="container content-page">
-        <header>
-            <h1>About Our Project</h1>
-        </header>
         <main>
+            <section class="about-intro">
+                <h2>Our Story</h2>
+                <p>Animal Face Test was born from a simple question: What if we could use cutting-edge artificial intelligence to create moments of joy and self-discovery? In a world where AI is often associated with complex, serious applications, we wanted to show that this powerful technology can also be fun, accessible, and entertaining for everyone.</p>
+                <p>What started as a weekend project exploring Google's Teachable Machine platform quickly evolved into something more meaningful. We discovered that people genuinely enjoy learning about themselves through playful experiences, and the comparison between human faces and beloved pets like dogs and cats resonated deeply with our early users.</p>
+            </section>
+
             <section>
                 <h2>Our Mission</h2>
-                <p>Welcome to Animal Face Test, a fun project born from a curiosity about the intersection of technology and everyday life. Our mission is to provide a delightful and engaging experience using the power of artificial intelligence. We believe that technology, even at its most complex, can be used to create simple moments of joy and self-discovery.</p>
+                <p>At Animal Face Test, our mission is threefold:</p>
+                <div class="mission-cards">
+                    <div class="mission-card">
+                        <h3>Democratize AI</h3>
+                        <p>We believe everyone should be able to experience the magic of artificial intelligence without needing a computer science degree. Our tool makes complex machine learning accessible to anyone with a web browser, regardless of technical background.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h3>Protect Privacy</h3>
+                        <p>In an era of data breaches and privacy concerns, we've built our entire platform around the principle that your personal data belongs to you. By processing everything locally in your browser, we've eliminated the privacy risks associated with uploading photos to remote servers.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h3>Spread Joy</h3>
+                        <p>Technology should enhance our lives and bring people together. Our test has become a way for friends, families, and coworkers to share laughs and discover fun facts about themselves and each other.</p>
+                    </div>
+                </div>
             </section>
+
             <section>
-                <h2>How It Works</h2>
-                <p>This website uses a sophisticated machine learning model, powered by Google's Teachable Machine. The model has been trained on thousands of images of dogs and cats to learn their distinct facial features. When you upload your photo, our algorithm analyzes it in real-time to determine which animal's features most closely resemble your own.</p>
-                <p><strong>Importantly, this process happens entirely within your browser. Your photos are never uploaded, stored, or seen by us.</strong> Your privacy is paramount.</p>
+                <h2>The Technology Behind Our Test</h2>
+                <p>Our animal face analysis is powered by a sophisticated Convolutional Neural Network (CNN) that we trained using Google's Teachable Machine platform. Here's a deeper look at the technology:</p>
+
+                <h3>What is a Convolutional Neural Network?</h3>
+                <p>A CNN is a type of artificial neural network specifically designed for processing visual data. Inspired by the human visual cortex, CNNs use layers of filters to detect patterns in images, from simple edges and shapes to complex features like facial characteristics.</p>
+
+                <h3>How We Trained Our Model</h3>
+                <p>We carefully curated a training dataset of thousands of images, teaching the model to recognize the subtle differences between dog-like and cat-like facial features. The training process involved:</p>
+                <ul>
+                    <li><strong>Data Collection:</strong> Gathering diverse images representing various facial types, ages, and ethnicities to ensure broad applicability</li>
+                    <li><strong>Feature Learning:</strong> Allowing the neural network to identify which facial features are most predictive of dog-like vs. cat-like classifications</li>
+                    <li><strong>Validation:</strong> Testing the model against held-out images to ensure consistent, reliable results</li>
+                    <li><strong>Optimization:</strong> Fine-tuning the model for browser-based performance without sacrificing accuracy</li>
+                </ul>
+
+                <h3>Why TensorFlow.js?</h3>
+                <p>We chose to deploy our model using TensorFlow.js, Google's machine learning library for JavaScript. This allows the entire analysis to happen in your browser, meaning:</p>
+                <ul>
+                    <li>No server uploads required - your photos stay on your device</li>
+                    <li>Instant results with no network latency</li>
+                    <li>Works offline once the page is loaded</li>
+                    <li>Complete privacy and security</li>
+                </ul>
             </section>
+
             <section>
                 <h2>Our Commitment to Quality</h2>
-                <p>We are dedicated to creating a high-quality, user-friendly experience. This means:</p>
-                <ul>
-                    <li><strong>Original, Valuable Content:</strong> We provide not just a tool, but also fun, engaging content to go along with your results.</li>
-                    <li><strong>User Privacy:</strong> We are transparent about how our tool works and we respect your data.</li>
-                    <li><strong>Clean, Fast Experience:</strong> Our site is designed to be easy to navigate, fast-loading, and enjoyable to use on any device.</li>
-                </ul>
-                <p>Thank you for visiting. We hope you have fun discovering your animal face!</p>
+                <p>We take pride in maintaining the highest standards across every aspect of our platform:</p>
+
+                <h3>Original, Valuable Content</h3>
+                <p>Every piece of content on this website is original and created with our users in mind. From detailed explanations of the science behind facial analysis to practical tips for getting the best results, we strive to educate and entertain in equal measure.</p>
+
+                <h3>User Experience First</h3>
+                <p>We've designed Animal Face Test to be intuitive and accessible. Whether you're using a smartphone, tablet, or desktop computer, the experience is seamless. We continuously test and optimize our interface based on user feedback.</p>
+
+                <h3>Transparent Operations</h3>
+                <p>We believe in complete transparency about how our tool works, what data (if any) we collect, and how we maintain our service. Our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a> are written in plain language, not legal jargon.</p>
+
+                <h3>Continuous Improvement</h3>
+                <p>We're constantly working to improve our AI model, add new features, and enhance the user experience. We welcome feedback and suggestions from our community.</p>
             </section>
+
+            <section>
+                <h2>The Science of Facial Perception</h2>
+                <p>The idea that human faces can resemble animals isn't just whimsical - it has roots in scientific research. Physiognomy, the practice of assessing character from facial features, dates back to ancient civilizations. While modern science doesn't support using facial features to determine personality, research does show that certain facial characteristics create consistent perceptions.</p>
+
+                <p>Studies in psychology have shown that faces with rounded features, larger eyes, and softer contours (what researchers call "baby-faced" features) are consistently perceived as more warm, trustworthy, and approachable - traits we often associate with dogs. Conversely, faces with angular features, narrower eyes, and defined bone structure are perceived as more independent, intelligent, and mysterious - characteristics we associate with cats.</p>
+
+                <p>Our AI model captures these subtle differences, providing a fun way to explore the science of facial perception while reminding us that everyone's face tells a unique story.</p>
+            </section>
+
+            <section>
+                <h2>Join Our Community</h2>
+                <p>Animal Face Test has grown into a community of people who appreciate fun, privacy-respecting technology. We'd love for you to be part of it:</p>
+                <ul>
+                    <li>Take the test and share your results with friends</li>
+                    <li>Read our educational content about AI and facial analysis</li>
+                    <li>Send us feedback and suggestions through our <a href="contact.html">contact page</a></li>
+                    <li>Help us spread the word about privacy-first AI applications</li>
+                </ul>
+                <p>Thank you for visiting Animal Face Test. We hope you enjoy discovering your animal look-alike!</p>
+            </section>
+
+            <div class="cta-box">
+                <h3>Ready to Find Your Animal Face?</h3>
+                <p>Try our free, instant, and completely private animal face analysis.</p>
+                <a href="index.html" class="cta-button">Take the Test Now</a>
+            </div>
         </main>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 Animal Face Test. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Animal Face Test</h4>
+                <p>A fun, AI-powered tool to discover which animal you look like. Built with privacy and entertainment in mind.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="dog-vs-cat.html">Dog vs Cat Guide</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Animal Face Test. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Animal Face Test | AI Technology Explained</title>
+    <meta name="description" content="Discover the AI technology behind Animal Face Test. Learn about Convolutional Neural Networks, machine learning, and how we analyze facial features.">
+    <meta name="keywords" content="how animal face test works, AI face analysis explained, CNN neural network, machine learning face detection">
+    <meta name="author" content="Animal Face Test">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://animalfacetest.com/how-it-works.html">
+    <meta property="og:title" content="How It Works - Animal Face Test">
+    <meta property="og:description" content="Learn the AI technology behind our animal face analysis.">
+    <meta property="og:type" content="article">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Animal Face Test</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About</a></li>
+                <li class="nav-item"><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li class="nav-item"><a href="dog-vs-cat.html">Dog vs Cat Faces</a></li>
+                <li class="nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>How Animal Face Test Works</h1>
+            <p>A deep dive into our AI-powered facial analysis technology</p>
+        </div>
+    </div>
+
+    <div class="container content-page">
+        <main>
+            <section>
+                <h2>The Three-Step Process</h2>
+                <p>Taking the Animal Face Test is simple, but the technology behind it is sophisticated. Here's what happens when you upload your photo:</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Step 1: Image Upload</h3>
+                        <p>When you select a photo, it's loaded directly into your browser's memory. The image is converted into a format that our AI model can process - specifically, a grid of pixel values representing the colors and brightness at each point in the image.</p>
+                        <p><strong>Important:</strong> Your image never leaves your device. All processing happens locally in your web browser using JavaScript.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                        </div>
+                        <h3>Step 2: AI Analysis</h3>
+                        <p>Our Convolutional Neural Network processes your image through multiple layers of analysis. Each layer detects increasingly complex features - from simple edges and shapes to facial structures and expressions. The model compares these features against patterns it learned during training.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Step 3: Result Generation</h3>
+                        <p>The model outputs a probability score for each category (dog-like and cat-like). The category with the higher probability becomes your result, along with a percentage indicating the confidence level. You'll also receive a personalized description based on your result.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Understanding Convolutional Neural Networks (CNNs)</h2>
+                <p>At the heart of Animal Face Test is a Convolutional Neural Network, one of the most powerful technologies in modern artificial intelligence. Let's break down how it works:</p>
+
+                <h3>What is a Neural Network?</h3>
+                <p>A neural network is a computing system inspired by the biological neural networks in our brains. It consists of interconnected nodes (artificial neurons) organized in layers. Each connection has a weight that adjusts during training, allowing the network to learn patterns from data.</p>
+
+                <h3>What Makes CNNs Special?</h3>
+                <p>Convolutional Neural Networks are specifically designed for processing visual data. They use a technique called "convolution" to scan images with small filters, detecting features at different positions. This makes them excellent at recognizing patterns regardless of where they appear in an image.</p>
+
+                <h3>The Layers of Our CNN</h3>
+                <div class="layer-explanation">
+                    <div class="layer-card">
+                        <h4>Input Layer</h4>
+                        <p>Receives the raw pixel values from your uploaded image. The image is typically resized to a standard dimension (e.g., 224x224 pixels) to ensure consistent processing.</p>
+                    </div>
+                    <div class="layer-card">
+                        <h4>Convolutional Layers</h4>
+                        <p>Apply filters that detect specific features like edges, curves, and textures. Early layers detect simple features; deeper layers combine these into complex patterns like eyes, noses, and facial shapes.</p>
+                    </div>
+                    <div class="layer-card">
+                        <h4>Pooling Layers</h4>
+                        <p>Reduce the spatial dimensions of the data while retaining important information. This makes the network more efficient and helps it focus on the most relevant features.</p>
+                    </div>
+                    <div class="layer-card">
+                        <h4>Fully Connected Layers</h4>
+                        <p>Take all the detected features and combine them to make a final classification decision. These layers learn which combinations of features indicate dog-like vs. cat-like faces.</p>
+                    </div>
+                    <div class="layer-card">
+                        <h4>Output Layer</h4>
+                        <p>Produces the final probability scores for each category. A softmax function ensures the probabilities sum to 100%, giving you a clear percentage result.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Google's Teachable Machine</h2>
+                <p>We trained our model using Google's Teachable Machine, a powerful yet accessible platform for creating machine learning models. Here's why we chose this approach:</p>
+
+                <h3>What is Teachable Machine?</h3>
+                <p>Teachable Machine is a web-based tool created by Google that allows anyone to train machine learning models without writing complex code. It uses transfer learning, which means our model builds upon a pre-trained base model that already understands basic image features.</p>
+
+                <h3>Benefits of Transfer Learning</h3>
+                <ul>
+                    <li><strong>Faster Training:</strong> Instead of learning from scratch, the model starts with knowledge of basic visual features</li>
+                    <li><strong>Better Accuracy:</strong> The pre-trained base was trained on millions of images, providing a strong foundation</li>
+                    <li><strong>Efficient Size:</strong> The resulting model is optimized for web browsers, loading quickly without sacrificing accuracy</li>
+                </ul>
+
+                <h3>Our Training Process</h3>
+                <p>We carefully curated our training dataset to ensure diverse, representative examples. The model was trained on images featuring:</p>
+                <ul>
+                    <li>People of different ages, from children to seniors</li>
+                    <li>Diverse ethnicities and backgrounds</li>
+                    <li>Various facial expressions and angles</li>
+                    <li>Different lighting conditions and image qualities</li>
+                </ul>
+                <p>This comprehensive approach helps ensure our model works well for everyone who takes the test.</p>
+            </section>
+
+            <section>
+                <h2>TensorFlow.js: AI in Your Browser</h2>
+                <p>Our model runs on TensorFlow.js, Google's machine learning library for JavaScript. This technology enables several key features:</p>
+
+                <h3>Client-Side Processing</h3>
+                <p>All AI computations happen directly in your web browser. When you load our page, the model is downloaded and runs locally on your device. This means:</p>
+                <ul>
+                    <li><strong>Complete Privacy:</strong> Your photos never leave your device or get uploaded to any server</li>
+                    <li><strong>No Account Required:</strong> We don't need to identify you to provide results</li>
+                    <li><strong>Offline Capable:</strong> Once loaded, the test works even without an internet connection</li>
+                    <li><strong>Instant Results:</strong> No network latency - results appear in milliseconds</li>
+                </ul>
+
+                <h3>WebGL Acceleration</h3>
+                <p>TensorFlow.js automatically uses your device's GPU (graphics processor) through WebGL when available. This hardware acceleration makes the AI analysis much faster than CPU-only processing, ensuring quick results even on mobile devices.</p>
+            </section>
+
+            <section>
+                <h2>What the AI Looks For</h2>
+                <p>Our model has learned to identify specific facial features that distinguish dog-like from cat-like appearances:</p>
+
+                <div class="comparison-grid">
+                    <div class="comparison-card dog">
+                        <h3>Dog-Like Features</h3>
+                        <ul>
+                            <li>Rounder face shape</li>
+                            <li>Wider-set eyes</li>
+                            <li>Fuller cheeks</li>
+                            <li>Softer facial contours</li>
+                            <li>Broader nose bridge</li>
+                            <li>More prominent smile lines</li>
+                            <li>Open, expressive features</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card cat">
+                        <h3>Cat-Like Features</h3>
+                        <ul>
+                            <li>More angular face shape</li>
+                            <li>Almond-shaped eyes</li>
+                            <li>Higher cheekbones</li>
+                            <li>Defined bone structure</li>
+                            <li>Narrower nose bridge</li>
+                            <li>More subtle expressions</li>
+                            <li>Refined, elegant features</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tips for Best Results</h2>
+                <p>While our AI is designed to work with a variety of photos, following these tips will help ensure the most accurate results:</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>Good Lighting</h4>
+                        <p>Natural, even lighting helps the AI clearly see your facial features. Avoid harsh shadows or backlighting.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Face the Camera</h4>
+                        <p>A front-facing photo works best. Extreme angles may affect the accuracy of the analysis.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Clear View</h4>
+                        <p>Make sure your face is clearly visible without obstructions like sunglasses, masks, or hair covering your face.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Neutral Expression</h4>
+                        <p>While the test works with any expression, a relaxed, neutral face often gives the most consistent results.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>High Resolution</h4>
+                        <p>Higher quality images provide more detail for the AI to analyze. Avoid blurry or pixelated photos.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>Single Subject</h4>
+                        <p>For best results, use a photo with only one person. The AI may have difficulty with group photos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Privacy and Security</h2>
+                <p>We've designed Animal Face Test with privacy as a core principle. Here's how we protect you:</p>
+                <ul>
+                    <li><strong>No Upload:</strong> Your photos are processed entirely in your browser and never sent to any server</li>
+                    <li><strong>No Storage:</strong> We don't store any images or facial data</li>
+                    <li><strong>No Tracking:</strong> We don't track which faces you analyze or your results</li>
+                    <li><strong>No Account:</strong> No registration or personal information required</li>
+                    <li><strong>Secure Connection:</strong> Our site uses HTTPS to protect all communications</li>
+                </ul>
+                <p>For complete details, please read our <a href="privacy.html">Privacy Policy</a>.</p>
+            </section>
+
+            <div class="cta-box">
+                <h3>Ready to Try It Yourself?</h3>
+                <p>Experience our AI-powered animal face analysis firsthand.</p>
+                <a href="index.html" class="cta-button">Take the Test Now</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Animal Face Test</h4>
+                <p>A fun, AI-powered tool to discover which animal you look like. Built with privacy and entertainment in mind.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="dog-vs-cat.html">Dog vs Cat Guide</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Animal Face Test. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
