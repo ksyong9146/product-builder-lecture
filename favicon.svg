@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#3b82f6"/>
+
+  <!-- Dog half (left) - warm orange/amber -->
+  <path d="M32 8 A24 24 0 0 0 32 56" fill="#f59e0b"/>
+
+  <!-- Dog ear (left) -->
+  <ellipse cx="14" cy="18" rx="8" ry="12" fill="#d97706" transform="rotate(-20 14 18)"/>
+
+  <!-- Cat ear (right) -->
+  <polygon points="50,8 58,22 42,22" fill="#7c3aed"/>
+
+  <!-- Dog eye (left) -->
+  <circle cx="22" cy="30" r="5" fill="white"/>
+  <circle cx="23" cy="30" r="3" fill="#1f2937"/>
+  <circle cx="24" cy="29" r="1" fill="white"/>
+
+  <!-- Cat eye (right) -->
+  <ellipse cx="42" cy="30" rx="5" ry="6" fill="#a5f3fc"/>
+  <ellipse cx="42" cy="30" rx="2" ry="5" fill="#1f2937"/>
+
+  <!-- Dog nose (left half) -->
+  <path d="M28 40 Q32 44 32 40 Q30 38 28 40" fill="#1f2937"/>
+
+  <!-- Cat nose (right half) -->
+  <path d="M32 40 Q32 44 36 40 Q34 38 32 40" fill="#fda4af"/>
+
+  <!-- Dog mouth -->
+  <path d="M24 44 Q28 48 32 44" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Cat mouth -->
+  <path d="M32 44 Q36 48 40 44" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Cat whiskers -->
+  <line x1="44" y1="36" x2="56" y2="34" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="44" y1="40" x2="56" y2="40" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="44" y1="44" x2="56" y2="46" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
