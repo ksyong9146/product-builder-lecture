@@ -18,9 +18,7 @@ let isModelLoaded = false;
 
 // Load the model when the page loads
 async function init() {
-    try {
-        loader.classList.remove('hidden');
-        loader.innerHTML = '<div class="loader-spinner"></div><p>Loading AI model...</p>';
+        loader.innerHTML = '<div class="loader-spinner"></div><p>AI 모델 로드 중...</p>';
 
         model = await tmImage.load(modelFile, metadataFile);
         maxPredictions = model.getTotalClasses();
@@ -30,7 +28,7 @@ async function init() {
         console.log('Model loaded successfully');
     } catch (error) {
         console.error('Error loading model:', error);
-        loader.innerHTML = '<p class="error-message">Error loading AI model. Please refresh the page and try again.</p>';
+        loader.innerHTML = '<p class="error-message">AI 모델 로드 오류. 페이지를 새로고침하여 다시 시도해 주세요.</p>';
     }
 }
 
@@ -42,13 +40,13 @@ uploadBtn.addEventListener('change', async (event) => {
     // Validate file type
     const validTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
     if (!validTypes.includes(file.type)) {
-        alert('Please upload a valid image file (JPG, PNG, GIF, or WebP)');
+        alert('유효한 이미지 파일(JPG, PNG, GIF 또는 WebP)을 업로드해 주세요.');
         return;
     }
 
     // Validate file size (10MB max)
     if (file.size > 10 * 1024 * 1024) {
-        alert('Please upload an image smaller than 10MB');
+        alert('10MB보다 작은 이미지를 업로드해 주세요.');
         return;
     }
 
@@ -68,7 +66,7 @@ uploadBtn.addEventListener('change', async (event) => {
             }
 
             loader.classList.remove('hidden');
-            loader.innerHTML = '<div class="loader-spinner"></div><p>Analyzing your facial features...</p>';
+            loader.innerHTML = '<div class="loader-spinner"></div><p>얼굴 특징 분석 중...</p>';
 
             // Small delay to ensure image is rendered
             await new Promise(resolve => setTimeout(resolve, 100));
@@ -115,7 +113,7 @@ async function predict(image) {
         displayResults(highestClass, highestProb, allPredictions);
     } catch (error) {
         console.error('Prediction error:', error);
-        labelContainer.innerHTML = '<p class="error-message">Error analyzing image. Please try a different photo.</p>';
+        labelContainer.innerHTML = '<p class="error-message">이미지 분석 오류. 다른 사진을 시도해 주세요.</p>';
     }
 }
 
@@ -138,59 +136,59 @@ function displayResults(highestClass, highestProb, allPredictions) {
     percentageBar.className = 'percentage-bar';
 
     if (highestClass === 'Dog') {
-        resultTitle.innerHTML = `You Have a Dog Face!`;
+        resultTitle.innerHTML = `당신은 강아지상입니다!`;
         resultDescription.innerHTML = `
-            <p class="result-percentage">${percentage}% Dog Face Match</p>
-            <p>Your facial features suggest warmth, friendliness, and approachability! People with dog-like faces typically have:</p>
+            <p class="result-percentage">${percentage}% 강아지상 일치</p>
+            <p>당신의 얼굴 특징은 따뜻함, 친근함, 접근성을 시사합니다! 강아지상 얼굴을 가진 사람들은 일반적으로 다음과 같습니다:</p>
             <ul>
-                <li><strong>Rounder face shape</strong> - conveying openness and warmth</li>
-                <li><strong>Wider-set, expressive eyes</strong> - suggesting honesty and enthusiasm</li>
-                <li><strong>Fuller cheeks</strong> - associated with youthfulness and approachability</li>
-                <li><strong>Open, friendly expression</strong> - making others feel at ease</li>
+                <li><strong>둥근 얼굴형</strong> - 개방성과 따뜻함을 전달합니다.</li>
+                <li><strong>넓고 표현력 있는 눈</strong> - 정직함과 열정을 나타냅니다.</li>
+                <li><strong>도톰한 볼</strong> - 젊음과 접근성과 관련이 있습니다.</li>
+                <li><strong>개방적이고 친근한 표정</strong> - 다른 사람들이 편안함을 느끼게 합니다.</li>
             </ul>
-            <p class="trait-highlight">Perceived traits: Loyal, friendly, energetic, trustworthy, and great companions who bring joy to those around them.</p>
+            <p class="trait-highlight">인식된 특성: 충성스럽고, 친근하며, 활기차고, 신뢰할 수 있으며, 주변 사람들에게 기쁨을 가져다주는 훌륭한 동반자입니다.</p>
         `;
         percentageBar.innerHTML = `
             <div class="bar-container">
                 <div class="bar-fill dog-bar" style="width: ${percentage}%"></div>
             </div>
             <div class="bar-labels">
-                <span class="dog-label">Dog ${percentage}%</span>
-                <span class="cat-label">Cat ${(100 - parseFloat(percentage)).toFixed(1)}%</span>
+                <span class="dog-label">강아지 ${percentage}%</span>
+                <span class="cat-label">고양이 ${(100 - parseFloat(percentage)).toFixed(1)}%</span>
             </div>
         `;
     } else if (highestClass === 'Cat') {
-        resultTitle.innerHTML = `You Have a Cat Face!`;
+        resultTitle.innerHTML = `당신은 고양이상입니다!`;
         resultDescription.innerHTML = `
-            <p class="result-percentage">${percentage}% Cat Face Match</p>
-            <p>Your facial features suggest elegance, intelligence, and an air of mystery! People with cat-like faces typically have:</p>
+            <p class="result-percentage">${percentage}% 고양이상 일치</p>
+            <p>당신의 얼굴 특징은 우아함, 지성, 신비로움을 시사합니다! 고양이상 얼굴을 가진 사람들은 일반적으로 다음과 같습니다:</p>
             <ul>
-                <li><strong>Angular face shape</strong> - conveying sophistication and elegance</li>
-                <li><strong>Almond-shaped eyes</strong> - suggesting perceptiveness and depth</li>
-                <li><strong>High cheekbones</strong> - associated with refinement and grace</li>
-                <li><strong>Subtle expressions</strong> - creating an intriguing, mysterious aura</li>
+                <li><strong>각진 얼굴형</strong> - 세련됨과 우아함을 전달합니다.</li>
+                <li><strong>아몬드 모양의 눈</strong> - 통찰력과 깊이를 나타냅니다.</li>
+                <li><strong>높은 광대뼈</strong> - 세련됨과 우아함과 관련이 있습니다.</li>
+                <li><strong>미묘한 표정</strong> - 흥미롭고 신비로운 분위기를 만듭니다.</li>
             </ul>
-            <p class="trait-highlight">Perceived traits: Independent, intelligent, graceful, calm, and highly perceptive individuals who value their autonomy.</p>
+            <p class="trait-highlight">인식된 특성: 독립적이고, 지적이며, 우아하고, 침착하며, 자율성을 중요하게 생각하는 매우 통찰력 있는 개인입니다.</p>
         `;
         percentageBar.innerHTML = `
             <div class="bar-container">
                 <div class="bar-fill cat-bar" style="width: ${percentage}%"></div>
             </div>
             <div class="bar-labels">
-                <span class="cat-label">Cat ${percentage}%</span>
-                <span class="dog-label">Dog ${(100 - parseFloat(percentage)).toFixed(1)}%</span>
+                <span class="cat-label">고양이 ${percentage}%</span>
+                <span class="dog-label">강아지 ${(100 - parseFloat(percentage)).toFixed(1)}%</span>
             </div>
         `;
     } else {
-        resultTitle.innerHTML = "Analysis Complete";
+        resultTitle.innerHTML = "분석 완료";
         resultDescription.innerHTML = `
-            <p>We couldn't determine a clear result. This might happen if:</p>
+            <p>명확한 결과를 판단할 수 없었습니다. 다음과 같은 경우 발생할 수 있습니다:</p>
             <ul>
-                <li>The face isn't clearly visible</li>
-                <li>The lighting is too dark or bright</li>
-                <li>The photo angle is too extreme</li>
+                <li>얼굴이 명확하게 보이지 않을 경우</li>
+                <li>조명이 너무 어둡거나 밝을 경우</li>
+                <li>사진 각도가 너무 극단적일 경우</li>
             </ul>
-            <p>Try uploading a clear, front-facing photo with good lighting for better results.</p>
+            <p>더 나은 결과를 위해 밝고 정면을 향한 사진을 업로드해 주세요.</p>
         `;
     }
 
@@ -201,7 +199,7 @@ function displayResults(highestClass, highestProb, allPredictions) {
     // Add share prompt
     const sharePrompt = document.createElement('p');
     sharePrompt.className = 'share-prompt';
-    sharePrompt.innerHTML = 'Share your result with friends and see if they match!';
+    sharePrompt.innerHTML = '친구들과 결과를 공유하고 그들이 누구와 일치하는지 확인해 보세요!';
     labelContainer.appendChild(sharePrompt);
 }
 
