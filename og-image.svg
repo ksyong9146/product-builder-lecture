@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5fa"/>
+      <stop offset="50%" stop-color="#f0eeff"/>
+      <stop offset="100%" stop-color="#faf8ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5da3"/>
+      <stop offset="100%" stop-color="#6c5ce7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Color dots -->
+  <circle cx="180" cy="420" r="40" fill="#FFB5B5" opacity="0.7"/>
+  <circle cx="280" cy="440" r="35" fill="#FF6B6B" opacity="0.7"/>
+  <circle cx="370" cy="420" r="38" fill="#87CEEB" opacity="0.7"/>
+  <circle cx="460" cy="440" r="32" fill="#4ECDC4" opacity="0.7"/>
+  <circle cx="540" cy="420" r="36" fill="#B8A9C9" opacity="0.7"/>
+  <circle cx="630" cy="440" r="34" fill="#D4A574" opacity="0.7"/>
+  <circle cx="720" cy="420" r="38" fill="#C0392B" opacity="0.7"/>
+  <circle cx="810" cy="440" r="33" fill="#6B3A2A" opacity="0.7"/>
+  <circle cx="900" cy="420" r="36" fill="#E91E63" opacity="0.7"/>
+  <circle cx="990" cy="440" r="35" fill="#2C3E6B" opacity="0.7"/>
+  <!-- Title -->
+  <text x="600" y="200" text-anchor="middle" font-family="sans-serif" font-size="72" font-weight="900" fill="#2d2d3f">나에게 어울리는</text>
+  <text x="600" y="290" text-anchor="middle" font-family="sans-serif" font-size="72" font-weight="900" fill="url(#accent)">퍼스널 컬러를 찾아보세요</text>
+  <!-- Subtitle -->
+  <text x="600" y="350" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#6b6b80">AI 딥러닝 피부톤 분석 | 10가지 세부 톤 진단</text>
+  <!-- Brand -->
+  <text x="600" y="560" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="800"><tspan fill="#ff5da3">MY</tspan><tspan fill="#6c5ce7">COLOR</tspan></text>
+</svg>

@@ -3,41 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>진단 결과 - MYCOLOR</title>
-    <meta name="description" content="AI 퍼스널 컬러 진단 결과를 확인하세요.">
+
+    <!-- Primary SEO -->
+    <title>퍼스널 컬러 진단 결과 | 나만의 컬러 팔레트 확인 - MYCOLOR</title>
+    <meta name="description" content="AI 퍼스널 컬러 진단 결과를 확인하세요. 나에게 어울리는 컬러 팔레트, 추천 립 컬러, 메이크업 팁, 스타일링 가이드를 제공합니다.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://imcolor.space/result.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MYCOLOR - 퍼스널 컬러 진단">
+    <meta property="og:title" content="퍼스널 컬러 진단 결과 | 나만의 컬러 팔레트 확인">
+    <meta property="og:description" content="AI 퍼스널 컬러 진단 결과를 확인하고, 나에게 어울리는 컬러 팔레트와 스타일링 팁을 받아보세요.">
+    <meta property="og:url" content="https://imcolor.space/result.html">
+    <meta property="og:image" content="https://imcolor.space/og-image.svg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="퍼스널 컬러 진단 결과 - MYCOLOR">
+    <meta name="twitter:description" content="나에게 어울리는 퍼스널 컬러 팔레트와 스타일링 팁을 확인하세요.">
+    <meta name="twitter:image" content="https://imcolor.space/og-image.svg">
+
+    <!-- Technical -->
+    <meta name="theme-color" content="#ff5da3">
+    <meta name="author" content="MYCOLOR">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://imcolor.space/" },
+            { "@type": "ListItem", "position": 2, "name": "진단하기", "item": "https://imcolor.space/diagnosis.html" },
+            { "@type": "ListItem", "position": 3, "name": "진단 결과" }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "퍼스널 컬러 진단 결과",
+        "description": "AI 퍼스널 컬러 진단 결과를 확인하세요. 나에게 어울리는 컬러 팔레트, 추천 립 컬러, 메이크업 팁, 스타일링 가이드를 제공합니다.",
+        "url": "https://imcolor.space/result.html",
+        "isPartOf": { "@type": "WebSite", "name": "MYCOLOR", "url": "https://imcolor.space/" },
+        "inLanguage": "ko"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="메인 내비게이션">
         <div class="navbar-inner">
-            <a href="index.html" class="navbar-logo">MY<span>COLOR</span></a>
+            <a href="/" class="navbar-logo" aria-label="MYCOLOR 홈으로 이동">MY<span>COLOR</span></a>
             <ul class="navbar-links">
-                <li><a href="index.html">홈</a></li>
-                <li><a href="explain.html">퍼스널컬러란?</a></li>
-                <li><a href="diagnosis.html">진단하기</a></li>
+                <li><a href="/">홈</a></li>
+                <li><a href="/explain.html">퍼스널컬러란?</a></li>
+                <li><a href="/diagnosis.html">진단하기</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="메뉴">
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
-    <div class="mobile-menu" id="mobile-menu">
-        <a href="index.html">홈</a>
-        <a href="explain.html">퍼스널컬러란?</a>
-        <a href="diagnosis.html">진단하기</a>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴">
+        <a href="/">홈</a>
+        <a href="/explain.html">퍼스널컬러란?</a>
+        <a href="/diagnosis.html">진단하기</a>
     </div>
 
-    <div class="result-page">
+    <main class="result-page">
+        <!-- Breadcrumb -->
+        <nav aria-label="브레드크럼" style="max-width:640px; margin:0 auto 1rem; font-size:0.85rem; color:var(--text-muted);">
+            <a href="/" style="color:var(--text-light); text-decoration:none;">홈</a>
+            <span aria-hidden="true"> &gt; </span>
+            <a href="/diagnosis.html" style="color:var(--text-light); text-decoration:none;">진단하기</a>
+            <span aria-hidden="true"> &gt; </span>
+            <span aria-current="page">결과</span>
+        </nav>
+
         <div class="result-container" id="result-container">
             <!-- Dynamically populated by JavaScript -->
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="index.html">홈</a> | <a href="diagnosis.html">다시 진단하기</a></p>
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="/">홈</a> | <a href="/diagnosis.html">다시 진단하기</a></p>
     </footer>
 
     <script src="color-data.js"></script>
