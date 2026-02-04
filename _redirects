@@ -1,0 +1,6 @@
+# URL canonicalization: redirect www to non-www
+https://www.imcolor.space/* https://imcolor.space/:splat 301
+
+# Redirect common typos and old paths
+/index.html / 301
+/home / 301

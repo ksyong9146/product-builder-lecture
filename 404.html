@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지를 찾을 수 없습니다 (404) - MYCOLOR</title>
+    <meta name="description" content="요청하신 페이지를 찾을 수 없습니다. MYCOLOR 퍼스널 컬러 진단 서비스로 이동하세요.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#ff5da3">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="메인 내비게이션">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-logo" aria-label="MYCOLOR 홈으로 이동">MY<span>COLOR</span></a>
+            <ul class="navbar-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/explain.html">퍼스널컬러란?</a></li>
+                <li><a href="/diagnosis.html">진단하기</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="모바일 메뉴">
+        <a href="/">홈</a>
+        <a href="/explain.html">퍼스널컬러란?</a>
+        <a href="/diagnosis.html">진단하기</a>
+    </div>
+
+    <main class="error-page" style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:70vh; text-align:center; padding:2rem;">
+        <div style="font-size:6rem; font-weight:900; background:linear-gradient(135deg, #ff5da3, #6c5ce7); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1;">404</div>
+        <h1 style="font-size:1.5rem; font-weight:700; margin:1rem 0 0.5rem; color:var(--text);">페이지를 찾을 수 없습니다</h1>
+        <p style="color:var(--text-light); max-width:400px; margin-bottom:2rem;">
+            요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다.<br>
+            아래 링크를 통해 원하는 페이지로 이동하세요.
+        </p>
+        <div style="display:flex; flex-direction:column; gap:0.8rem; width:100%; max-width:300px;">
+            <a href="/" class="hero-cta" style="text-decoration:none; text-align:center;">
+                홈으로 이동
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/diagnosis.html" style="color:var(--primary); text-decoration:none; font-weight:600; padding:0.8rem;">퍼스널 컬러 진단하기</a>
+            <a href="/explain.html" style="color:var(--text-light); text-decoration:none; padding:0.5rem;">퍼스널 컬러란?</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="/">홈</a> | <a href="/diagnosis.html">진단하기</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
