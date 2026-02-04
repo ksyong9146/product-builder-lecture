@@ -144,39 +144,71 @@
         </div>
     `;
 
-    // Share button
-    const shareBtn = document.getElementById('btn-share');
-    if (shareBtn) {
-        shareBtn.addEventListener('click', async () => {
-            const shareData = {
-                title: `나의 퍼스널 컬러는 ${data.name}!`,
-                text: `AI 퍼스널 컬러 진단 결과, 나는 ${data.name}(${data.nameEn}) 타입이에요! ${data.keywords.map(k => '#' + k).join(' ')}`,
-                url: window.location.href
-            };
-
-            if (navigator.share) {
-                try {
-                    await navigator.share(shareData);
-                } catch (e) {
-                    // User cancelled sharing
-                }
-            } else {
-                // Fallback: copy to clipboard
-                try {
-                    await navigator.clipboard.writeText(
-                        `${shareData.text}\n${shareData.url}`
-                    );
-                    shareBtn.textContent = '링크가 복사되었어요!';
-                    setTimeout(() => {
-                        shareBtn.innerHTML = `
-                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-                            결과 공유하기
-                        `;
-                    }, 2000);
-                } catch (e) {
-                    // Clipboard not available
-                }
-            }
-        });
+    // Initialize Kakao SDK
+    if (Kakao && !Kakao.isInitialized()) {
+        Kakao.init('YOUR_JAVASCRIPT_KEY'); // Replace with your actual JavaScript Key
     }
+
+    // Share data
+    const shareTitle = `나의 퍼스널 컬러는 ${data.name}!`;
+    const shareDescription = `AI 퍼스널 컬러 진단 결과, 나는 ${data.name}(${data.nameEn}) 타입이에요! ${data.keywords.map(k => '#' + k).join(' ')}`;
+    const shareUrl = window.location.href;
+    const shareImage = 'https://imcolor.space/og-image.svg'; // Default OG image
+
+    // Sharing functions
+    const shareKakao = () => {
+        if (Kakao) {
+            Kakao.Share.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: shareTitle,
+                    description: shareDescription,
+                    imageUrl: shareImage,
+                    link: {
+                        mobileWebUrl: shareUrl,
+                        webUrl: shareUrl,
+                    },
+                },
+                buttons: [
+                    {
+                        title: '웹으로 보기',
+                        link: {
+                            mobileWebUrl: shareUrl,
+                            webUrl: shareUrl,
+                        },
+                    },
+                ],
+            });
+        }
+    };
+
+    const shareFacebook = () => {
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        window.open(facebookShareUrl, '_blank', 'width=600,height=400');
+    };
+
+    const shareTwitter = () => {
+        const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareDescription)}&url=${encodeURIComponent(shareUrl)}`;
+        window.open(twitterShareUrl, '_blank', 'width=600,height=400');
+    };
+
+    const copyLink = async (event) => {
+        try {
+            await navigator.clipboard.writeText(shareUrl);
+            const button = event.target;
+            button.textContent = '복사 완료!';
+            setTimeout(() => {
+                button.innerHTML = ''; // Clear text, assume icon will be added via CSS
+            }, 2000);
+        } catch (e) {
+            alert('링크 복사에 실패했습니다.');
+        }
+    };
+
+    // Attach event listeners
+    document.getElementById('share-kakao')?.addEventListener('click', shareKakao);
+    document.getElementById('share-facebook')?.addEventListener('click', shareFacebook);
+    document.getElementById('share-twitter')?.addEventListener('click', shareTwitter);
+    document.getElementById('share-copy')?.addEventListener('click', copyLink);
+
 })();
