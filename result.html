@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퍼스널 컬러 진단</title>
+    <title>퍼스널 컬러 진단 - 결과</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>나의 퍼스널 컬러는?</h1>
+            <h1>진단 결과</h1>
         </header>
-        <main>
-            <p>AI가 아닌, 몇 가지 질문으로 간단하게 알아보는 퍼스널 컬러!</p>
-            <a href="diagnosis.html" class="start-btn">진단 시작하기</a>
+        <main id="result-container">
+            <h2 id="result-title"></h2>
+            <img id="result-image" src="" alt="" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+            <p id="result-description"></p>
+            <a href="diagnosis.html" class="start-btn">다시 테스트하기</a>
         </main>
         <footer>
             <p>&copy; 2026 Personal Color. All rights reserved.</p>
