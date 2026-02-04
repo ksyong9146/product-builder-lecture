@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼스널컬러란? - MYCOLOR</title>
+    <meta name="description" content="퍼스널 컬러의 개념, 4계절 유형, 10가지 세부 톤에 대해 알아보세요.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-logo">MY<span>COLOR</span></a>
+            <ul class="navbar-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="explain.html" class="active">퍼스널컬러란?</a></li>
+                <li><a href="diagnosis.html">진단하기</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="메뉴">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">홈</a>
+        <a href="explain.html">퍼스널컬러란?</a>
+        <a href="diagnosis.html">진단하기</a>
+    </div>
+
+    <div class="explain-page">
+        <div class="explain-container">
+            <!-- Hero -->
+            <div class="explain-hero fade-in">
+                <h1>퍼스널 컬러란?</h1>
+                <p>퍼스널 컬러는 개인의 피부톤, 머리카락, 눈동자 색상 등을 기반으로<br>가장 잘 어울리는 색상 체계를 찾는 컬러 이론입니다</p>
+            </div>
+
+            <!-- What is Personal Color -->
+            <div class="explain-section fade-in">
+                <h2>퍼스널 컬러의 개념</h2>
+                <p>퍼스널 컬러(Personal Color)란 사람마다 타고난 피부, 머리카락, 눈동자의 색과 조화를 이루는 색상 그룹을 의미합니다. 자신에게 맞는 컬러를 활용하면 피부가 더욱 맑고 건강해 보이며, 인상이 밝아지고 자신감을 높일 수 있습니다.</p>
+                <p>반대로 어울리지 않는 색상은 피부를 칙칙하거나 피곤해 보이게 만들 수 있습니다. 이것이 바로 퍼스널 컬러 진단이 중요한 이유입니다.</p>
+            </div>
+
+            <!-- How diagnosis works -->
+            <div class="explain-section fade-in">
+                <h2>진단 방법</h2>
+                <p>MYCOLOR는 4계절 컬러 이론을 기반으로, PCCS 색채 기준에 따라 <strong>명도(밝기)</strong>, <strong>채도(선명도)</strong>, <strong>색온도(웜/쿨)</strong>, <strong>RGB 값</strong>을 종합적으로 측정하여 10가지 세부 톤으로 분류합니다.</p>
+                <p>AI 딥러닝 모델이 피부의 색상 데이터를 Lab 색공간에서 분석하여 정확한 언더톤과 톤 유형을 판별합니다.</p>
+            </div>
+
+            <!-- 4 Seasons -->
+            <div class="explain-section fade-in">
+                <h2>4계절 컬러 유형</h2>
+                <p>모든 색상은 크게 4계절(봄, 여름, 가을, 겨울)로 나뉘며, 각 계절은 고유한 색감 특성을 가지고 있습니다.</p>
+
+                <div class="season-grid">
+                    <div class="season-card">
+                        <div class="season-card-header">
+                            <div class="season-dot" style="background:var(--spring)"></div>
+                            <h4>봄 (Spring Warm)</h4>
+                        </div>
+                        <p>따뜻하고 밝은 색감이 어울리는 웜톤. 생기 있고 화사한 느낌을 줍니다.</p>
+                        <div class="tone-tags">
+                            <span class="tone-tag">라이트</span>
+                            <span class="tone-tag">브라이트</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-card-header">
+                            <div class="season-dot" style="background:var(--summer)"></div>
+                            <h4>여름 (Summer Cool)</h4>
+                        </div>
+                        <p>시원하고 부드러운 색감이 어울리는 쿨톤. 청량하고 우아한 인상을 줍니다.</p>
+                        <div class="tone-tags">
+                            <span class="tone-tag">라이트</span>
+                            <span class="tone-tag">브라이트</span>
+                            <span class="tone-tag">뮤트</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-card-header">
+                            <div class="season-dot" style="background:var(--fall)"></div>
+                            <h4>가을 (Autumn Warm)</h4>
+                        </div>
+                        <p>깊고 따뜻한 어스톤이 어울리는 웜톤. 고급스럽고 편안한 분위기를 풍깁니다.</p>
+                        <div class="tone-tags">
+                            <span class="tone-tag">뮤트</span>
+                            <span class="tone-tag">스트롱</span>
+                            <span class="tone-tag">딥</span>
+                        </div>
+                    </div>
+                    <div class="season-card">
+                        <div class="season-card-header">
+                            <div class="season-dot" style="background:var(--winter)"></div>
+                            <h4>겨울 (Winter Cool)</h4>
+                        </div>
+                        <p>선명하고 차가운 색감이 어울리는 쿨톤. 세련되고 강렬한 이미지를 줍니다.</p>
+                        <div class="tone-tags">
+                            <span class="tone-tag">브라이트</span>
+                            <span class="tone-tag">딥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 Tones Detail -->
+            <div class="explain-section fade-in">
+                <h2>10가지 세부 톤</h2>
+                <p>4계절을 더욱 세분화하여 10가지 톤으로 나누면 보다 정밀한 컬러 매칭이 가능합니다.</p>
+
+                <div class="tone-grid">
+                    <!-- Spring -->
+                    <a href="result.html?type=springLight" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#FFE4C4"></span>
+                            <span style="background:#FFDAB9"></span>
+                            <span style="background:#FFB6C1"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>봄 라이트 (Spring Light)</h4>
+                            <p>밝고 여리여리한 파스텔 웜톤 | #순한 #생기 #부드러운</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=springBright" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#FF6347"></span>
+                            <span style="background:#FFA500"></span>
+                            <span style="background:#FFD700"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>봄 브라이트 (Spring Bright)</h4>
+                            <p>선명하고 화사한 고채도 웜톤 | #발랄한 #선명한 #로맨틱</p>
+                        </div>
+                    </a>
+                    <!-- Summer -->
+                    <a href="result.html?type=summerLight" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#B0C4DE"></span>
+                            <span style="background:#DDA0DD"></span>
+                            <span style="background:#E6E6FA"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>여름 라이트 (Summer Light)</h4>
+                            <p>밝고 시원한 파스텔 쿨톤 | #맑은 #싱그러운 #청량한</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=summerBright" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#FF1493"></span>
+                            <span style="background:#DA70D6"></span>
+                            <span style="background:#4169E1"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>여름 브라이트 (Summer Bright)</h4>
+                            <p>쨍하고 선명한 고채도 쿨톤 | #페미닌 #시원한 #세련된</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=summerMute" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#C8A2C8"></span>
+                            <span style="background:#D8BFD8"></span>
+                            <span style="background:#B0A4B8"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>여름 뮤트 (Summer Mute)</h4>
+                            <p>차분하고 그레이시한 쿨톤 | #청초한 #우아한 #차분한</p>
+                        </div>
+                    </a>
+                    <!-- Fall -->
+                    <a href="result.html?type=fallMute" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#C4A882"></span>
+                            <span style="background:#D2B48C"></span>
+                            <span style="background:#DEB887"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>가을 뮤트 (Fall Mute)</h4>
+                            <p>부드럽고 톤 다운된 웜톤 | #차분한 #고급스러운 #편안한</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=fallStrong" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#B22222"></span>
+                            <span style="background:#DAA520"></span>
+                            <span style="background:#CD853F"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>가을 스트롱 (Fall Strong)</h4>
+                            <p>화려하고 강한 고채도 웜톤 | #화려한 #또렷한 #무난한</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=fallDeep" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#800020"></span>
+                            <span style="background:#4A0000"></span>
+                            <span style="background:#654321"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>가을 딥 (Fall Deep)</h4>
+                            <p>깊고 진한 저명도 웜톤 | #깊은 #클래식 #관능적인</p>
+                        </div>
+                    </a>
+                    <!-- Winter -->
+                    <a href="result.html?type=winterBright" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#FF0050"></span>
+                            <span style="background:#0000FF"></span>
+                            <span style="background:#FF00FF"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>겨울 브라이트 (Winter Bright)</h4>
+                            <p>강렬하고 비비드한 고채도 쿨톤 | #선명한 #과감한 #시원한</p>
+                        </div>
+                    </a>
+                    <a href="result.html?type=winterDeep" class="tone-card">
+                        <div class="tone-colors">
+                            <span style="background:#191970"></span>
+                            <span style="background:#4B0082"></span>
+                            <span style="background:#2F4F4F"></span>
+                        </div>
+                        <div class="tone-info">
+                            <h4>겨울 딥 (Winter Deep)</h4>
+                            <p>어둡고 차가운 저명도 쿨톤 | #시크한 #도도한 #그윽한</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="explain-section fade-in">
+                <h2>퍼스널 컬러를 알면 좋은 점</h2>
+                <p>자신의 퍼스널 컬러를 알면 메이크업, 헤어 컬러, 패션, 액세서리 선택에서 실패를 줄일 수 있습니다. 어울리는 색상을 활용하면 피부가 밝고 건강해 보이며, 전체적인 이미지가 한층 세련되어집니다.</p>
+                <p>또한 쇼핑 시 불필요한 구매를 줄이고, 나만의 통일된 스타일을 완성할 수 있어 일상의 만족도가 높아집니다.</p>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="diagnosis.html" class="hero-cta">
+                    내 퍼스널 컬러 진단하기
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="index.html">홈</a> | <a href="diagnosis.html">진단하기</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

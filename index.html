@@ -3,22 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퍼스널 컬러 진단</title>
+    <title>퍼스널 컬러 진단 - AI 피부톤 분석</title>
+    <meta name="description" content="AI 딥러닝 기술로 나에게 어울리는 퍼스널 컬러를 찾아보세요. 카메라로 간편하게 10가지 톤 중 나의 퍼스널 컬러를 진단합니다.">
+    <meta property="og:title" content="퍼스널 컬러 진단 - AI 피부톤 분석">
+    <meta property="og:description" content="AI 딥러닝 기술로 나에게 어울리는 퍼스널 컬러를 찾아보세요.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>나의 퍼스널 컬러는?</h1>
-        </header>
-        <main>
-            <p>AI가 아닌, 몇 가지 질문으로 간단하게 알아보는 퍼스널 컬러!</p>
-            <a href="diagnosis.html" class="start-btn">진단 시작하기</a>
-        </main>
-        <footer>
-            <p>&copy; 2026 Personal Color. All rights reserved.</p>
-        </footer>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-logo">MY<span>COLOR</span></a>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="active">홈</a></li>
+                <li><a href="explain.html">퍼스널컬러란?</a></li>
+                <li><a href="diagnosis.html">진단하기</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="메뉴">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">홈</a>
+        <a href="explain.html">퍼스널컬러란?</a>
+        <a href="diagnosis.html">진단하기</a>
     </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">AI 퍼스널 컬러 진단</div>
+        <h1 class="fade-in">
+            나에게 어울리는<br>
+            <span class="gradient-text">퍼스널 컬러</span>를 찾아보세요
+        </h1>
+        <p class="hero-subtitle fade-in fade-in-delay-1">
+            AI 딥러닝 피부톤 분석 기술로<br>
+            10가지 세부 톤 중 나만의 컬러를 진단합니다
+        </p>
+        <a href="diagnosis.html" class="hero-cta fade-in fade-in-delay-2">
+            무료 진단 시작하기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <div class="color-preview fade-in fade-in-delay-3">
+            <div class="color-dot" style="background:#FFB5B5" title="봄 라이트"></div>
+            <div class="color-dot" style="background:#FF6B6B" title="봄 브라이트"></div>
+            <div class="color-dot" style="background:#87CEEB" title="여름 라이트"></div>
+            <div class="color-dot" style="background:#4ECDC4" title="여름 브라이트"></div>
+            <div class="color-dot" style="background:#B8A9C9" title="여름 뮤트"></div>
+            <div class="color-dot" style="background:#D4A574" title="가을 뮤트"></div>
+            <div class="color-dot" style="background:#C0392B" title="가을 스트롱"></div>
+            <div class="color-dot" style="background:#6B3A2A" title="가을 딥"></div>
+            <div class="color-dot" style="background:#E91E63" title="겨울 브라이트"></div>
+            <div class="color-dot" style="background:#2C3E6B" title="겨울 딥"></div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="section-title">왜 퍼스널 컬러 진단이 필요할까요?</h2>
+        <p class="section-subtitle">나에게 맞는 컬러를 알면, 더 빛나는 나를 만들 수 있어요</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(255,93,163,0.1)">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff5da3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <h3>빠른 AI 진단</h3>
+                <p>카메라 또는 사진 한 장으로 몇 초 안에 정확한 퍼스널 컬러를 분석해드립니다</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(108,92,231,0.1)">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6c5ce7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>10가지 세부 톤</h3>
+                <p>봄, 여름, 가을, 겨울의 4계절을 10가지 세부 톤으로 정밀하게 분류합니다</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="background:rgba(126,200,227,0.1)">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7ec8e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>맞춤 스타일링</h3>
+                <p>진단 결과에 따른 메이크업, 헤어, 패션 컬러 추천을 받아보세요</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps">
+        <div class="steps-inner">
+            <h2 class="section-title">이렇게 진단해요</h2>
+            <p class="section-subtitle">3단계로 간단하게 나의 퍼스널 컬러를 확인하세요</p>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>카메라 촬영 또는 사진 업로드</h3>
+                        <p>자연광 아래에서 정면 얼굴을 촬영하거나, 이미 찍어둔 사진을 업로드하세요</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI 피부톤 분석</h3>
+                        <p>딥러닝 모델이 피부의 명도, 채도, 색온도, RGB 값을 정밀하게 분석합니다</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>결과 확인</h3>
+                        <p>10가지 톤 중 나에게 가장 잘 어울리는 퍼스널 컬러와 맞춤 팔레트를 확인하세요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="explain.html">퍼스널컬러란?</a> | <a href="diagnosis.html">진단하기</a></p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
 </html>

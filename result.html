@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퍼스널 컬러 진단 - 결과</title>
+    <title>진단 결과 - MYCOLOR</title>
+    <meta name="description" content="AI 퍼스널 컬러 진단 결과를 확인하세요.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>진단 결과</h1>
-        </header>
-        <main id="result-container">
-            <h2 id="result-title"></h2>
-            <img id="result-image" src="" alt="" style="max-width: 100%; border-radius: 10px; margin-bottom: 1rem;">
-            <p id="result-description"></p>
-            <a href="diagnosis.html" class="start-btn">다시 테스트하기</a>
-        </main>
-        <footer>
-            <p>&copy; 2026 Personal Color. All rights reserved.</p>
-        </footer>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="navbar-logo">MY<span>COLOR</span></a>
+            <ul class="navbar-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="explain.html">퍼스널컬러란?</a></li>
+                <li><a href="diagnosis.html">진단하기</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="메뉴">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">홈</a>
+        <a href="explain.html">퍼스널컬러란?</a>
+        <a href="diagnosis.html">진단하기</a>
     </div>
+
+    <div class="result-page">
+        <div class="result-container" id="result-container">
+            <!-- Dynamically populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 MYCOLOR. All rights reserved. | <a href="index.html">홈</a> | <a href="diagnosis.html">다시 진단하기</a></p>
+    </footer>
+
+    <script src="color-data.js"></script>
+    <script src="result.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

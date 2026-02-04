@@ -1,0 +1,423 @@
+// 10가지 퍼스널 컬러 타입 데이터
+const COLOR_TYPES = {
+    springLight: {
+        id: 'springLight',
+        season: 'spring',
+        seasonKr: '봄',
+        name: '봄 라이트',
+        nameEn: 'Spring Light',
+        keywords: ['순한', '생기넘치는', '여리여리한', '부드러운', '귀여운', '따뜻한'],
+        description: '봄 라이트 타입은 밝고 여리여리한 파스텔 웜톤이 가장 잘 어울리는 유형입니다. 맑고 생기 있는 피부톤이 장점이며, 단아하고 청순한 느낌을 자연스럽게 연출할 수 있습니다. 고명도에 저채도의 순한 파스텔 톤을 매칭하면 여리여리하고 청순한 분위기를 극대화할 수 있어요.',
+        characteristics: '페일톤과 라이트톤으로 구성되며, 밝으면서도 쨍하지 않은 부드러운 색감이 특징입니다. 진한 색조나 짙은 음영 화장은 피하는 것이 좋습니다.',
+        palette: [
+            { color: '#FFE4C4', name: '비스크' },
+            { color: '#FFDAB9', name: '피치퍼프' },
+            { color: '#FFB6C1', name: '라이트핑크' },
+            { color: '#FFC0A0', name: '살몬' },
+            { color: '#F5DEB3', name: '위트' },
+            { color: '#FFD1DC', name: '파스텔핑크' },
+            { color: '#FFECD2', name: '크림' },
+            { color: '#E8D5B7', name: '베이지' },
+            { color: '#FFF0DB', name: '아이보리' },
+            { color: '#FFE0B2', name: '라이트피치' }
+        ],
+        bestColors: [
+            { color: '#FFDAB9', name: '살구색' },
+            { color: '#FF8C69', name: '코랄' },
+            { color: '#FFA07A', name: '살몬핑크' },
+            { color: '#FFB6C1', name: '라이트핑크' },
+            { color: '#F5DEB3', name: '아이보리' }
+        ],
+        worstColors: [
+            { color: '#000000', name: '블랙' },
+            { color: '#4A0000', name: '다크레드' },
+            { color: '#191970', name: '네이비' }
+        ],
+        lipColors: ['살구색', '코랄', '오렌지', '살몬핑크', '흰끼 있는 레드'],
+        tips: [
+            '파운데이션은 따뜻한 아이보리 톤을 선택하세요',
+            '아이섀도우는 피치, 코랄, 라이트 브라운이 잘 어울려요',
+            '블러셔는 살구색이나 연한 코랄 톤이 자연스러워요',
+            '헤어 컬러는 밝은 브라운, 밀크 브라운이 추천됩니다',
+            '액세서리는 골드 계열이 피부톤과 잘 어울려요'
+        ]
+    },
+    springBright: {
+        id: 'springBright',
+        season: 'spring',
+        seasonKr: '봄',
+        name: '봄 브라이트',
+        nameEn: 'Spring Bright',
+        keywords: ['밝은', '생기넘치는', '발랄한', '선명한', '귀여운', '로맨틱'],
+        description: '봄 브라이트 타입은 따뜻한 유형으로 선명하고 밝은 톤이 화사하며 생동감과 에너지를 느끼게 합니다. 고채도의 따뜻한 발랄한 색상이 가장 잘 어울리며, 뚜렷한 이목구비가 특징입니다.',
+        characteristics: '고명도의 선명한 색도 소화 가능하며, 비비드하면서도 따뜻한 색상이 특히 잘 맞습니다. 탁한 색이나 어두운 색보다는 밝고 선명한 색이 얼굴을 화사하게 만들어줍니다.',
+        palette: [
+            { color: '#FF6347', name: '토마토' },
+            { color: '#FF7F50', name: '코랄' },
+            { color: '#FFA500', name: '오렌지' },
+            { color: '#FFD700', name: '골드' },
+            { color: '#FF69B4', name: '핫핑크' },
+            { color: '#FF4500', name: '오렌지레드' },
+            { color: '#FFAA33', name: '앰버' },
+            { color: '#FF8C00', name: '다크오렌지' },
+            { color: '#FFB347', name: '파스텔오렌지' },
+            { color: '#FF6F61', name: '리빙코랄' }
+        ],
+        bestColors: [
+            { color: '#FF7F50', name: '코랄' },
+            { color: '#FF6347', name: '토마토레드' },
+            { color: '#FFA500', name: '오렌지' },
+            { color: '#FFD700', name: '골드옐로우' },
+            { color: '#FF69B4', name: '비비드핑크' }
+        ],
+        worstColors: [
+            { color: '#808080', name: '그레이' },
+            { color: '#4B0082', name: '다크퍼플' },
+            { color: '#2F4F4F', name: '다크그린' }
+        ],
+        lipColors: ['코랄핑크', '코랄레드', '오렌지', '살몬핑크', '선홍빛 레드'],
+        tips: [
+            '파운데이션은 21호~23호 웜톤 계열이 잘 맞아요',
+            '아이섀도우는 코랄, 오렌지, 골드 글리터가 화사해요',
+            '블러셔는 선명한 코랄이나 피치 톤이 생기를 더해요',
+            '헤어 컬러는 오렌지 브라운, 카라멜이 추천됩니다',
+            '의상은 비비드한 오렌지, 코랄, 옐로우가 포인트 컬러로 좋아요'
+        ]
+    },
+    summerLight: {
+        id: 'summerLight',
+        season: 'summer',
+        seasonKr: '여름',
+        name: '여름 라이트',
+        nameEn: 'Summer Light',
+        keywords: ['맑은', '싱그러운', '시원한', '깨끗한', '은은한', '청량한'],
+        description: '여름 라이트 타입은 블루베이스의 밝은 파스텔 계열이 어울리며, 청량감 넘치고 시원하면서 차분한 분위기를 가집니다. 투명한 피부톤에 붉은 기를 가지며, 차분하면서도 청량한 인상이 특징입니다.',
+        characteristics: '페일 톤과 라이트 톤으로 구성되며, 고명도에 쿨한 파스텔 톤이 특징입니다. 갈색 머리카락에 쿨한 레드 브라운 또는 브라운 색 눈동자를 가진 경우가 많습니다.',
+        palette: [
+            { color: '#B0C4DE', name: '라이트스틸블루' },
+            { color: '#DDA0DD', name: '플럼' },
+            { color: '#E6E6FA', name: '라벤더' },
+            { color: '#FFB6C1', name: '라이트핑크' },
+            { color: '#ADD8E6', name: '라이트블루' },
+            { color: '#C8A2C8', name: '라일락' },
+            { color: '#F0E6FF', name: '페일퍼플' },
+            { color: '#E0BBE4', name: '라벤더핑크' },
+            { color: '#D4E4F7', name: '페일블루' },
+            { color: '#F5C6D0', name: '로즈핑크' }
+        ],
+        bestColors: [
+            { color: '#DDA0DD', name: '자줏빛핑크' },
+            { color: '#FFB6C1', name: '로즈핑크' },
+            { color: '#E6E6FA', name: '라벤더' },
+            { color: '#ADD8E6', name: '라이트블루' },
+            { color: '#F5C6D0', name: '딸기우유' }
+        ],
+        worstColors: [
+            { color: '#FF8C00', name: '오렌지' },
+            { color: '#8B4513', name: '브라운' },
+            { color: '#DAA520', name: '골드' }
+        ],
+        lipColors: ['자줏빛 핑크', '로즈핑크', '딸기우유 톤', '흰끼 있는 핑크', '쿨 코랄'],
+        tips: [
+            '파운데이션은 핑크 베이스의 밝은 톤이 어울려요',
+            '아이섀도우는 라벤더, 연핑크, 라이트 모브가 잘 맞아요',
+            '블러셔는 로즈핑크나 라벤더 핑크가 청량한 느낌을 줘요',
+            '헤어 컬러는 애쉬 브라운, 라벤더 브라운이 추천됩니다',
+            '실버 액세서리가 피부톤을 더 맑게 보이게 해요'
+        ]
+    },
+    summerBright: {
+        id: 'summerBright',
+        season: 'summer',
+        seasonKr: '여름',
+        name: '여름 브라이트',
+        nameEn: 'Summer Bright',
+        keywords: ['맑은', '페미닌한', '시원한', '선명한', '우아한', '세련된'],
+        description: '여름 브라이트 타입은 여름 시즌의 절정을 나타내는 퍼스널컬러로, 가장 쨍한 색감을 가지고 있습니다. 블루베이스의 선명한 고채도 색상이 어울리며, 비비드 톤에서 명도가 한 톤 밝아진 색상이 특징입니다.',
+        characteristics: '흰끼가 가미된 원색, 고명도와 고채도의 조합이 어울립니다. 블루 베이스의 흰기 있는 색상이 특히 잘 맞으며, 여름 뮤트나 여름 라이트와도 호환성이 있습니다.',
+        palette: [
+            { color: '#FF1493', name: '딥핑크' },
+            { color: '#DA70D6', name: '오키드' },
+            { color: '#4169E1', name: '로얄블루' },
+            { color: '#00CED1', name: '다크터콰이즈' },
+            { color: '#FF69B4', name: '핫핑크' },
+            { color: '#7B68EE', name: '슬레이트블루' },
+            { color: '#00BFFF', name: '딥스카이블루' },
+            { color: '#FF6EB4', name: '핑크' },
+            { color: '#8A2BE2', name: '바이올렛' },
+            { color: '#20B2AA', name: '라이트시아' }
+        ],
+        bestColors: [
+            { color: '#FF1493', name: '핫핑크' },
+            { color: '#FF69B4', name: '핑크레드' },
+            { color: '#DA70D6', name: '푸시아' },
+            { color: '#4169E1', name: '로얄블루' },
+            { color: '#00CED1', name: '쿨민트' }
+        ],
+        worstColors: [
+            { color: '#DAA520', name: '골드' },
+            { color: '#D2691E', name: '카키' },
+            { color: '#8B4513', name: '초콜릿' }
+        ],
+        lipColors: ['핫핑크', '핑크레드', '푸시아', '쿨 레드', '체리핑크'],
+        tips: [
+            '파운데이션은 핑크 베이스 21호가 피부를 화사하게 만들어요',
+            '아이섀도우는 핑크, 퍼플, 블루 계열이 잘 어울려요',
+            '블러셔는 핫핑크나 쿨 로즈가 선명한 인상을 줘요',
+            '헤어 컬러는 레드 브라운, 버건디가 추천됩니다',
+            '의상은 로얄블루, 핫핑크, 화이트 조합이 세련되어 보여요'
+        ]
+    },
+    summerMute: {
+        id: 'summerMute',
+        season: 'summer',
+        seasonKr: '여름',
+        name: '여름 뮤트',
+        nameEn: 'Summer Mute',
+        keywords: ['청초한', '분위기', '시원한', '깨끗한', '우아한', '세련된'],
+        description: '여름 뮤트 타입은 블루베이스 파스텔 계열이거나 회색이 섞인 색상이 어울립니다. 중간 밝기에 톤 다운된 회색 기운이 돌아서 차분하면서도 단아한 인상을 줍니다.',
+        characteristics: '입술과 눈 밑에 보랏빛이 약하게 돌고, 머리카락과 눈썹은 애쉬 브라운을 가지고 있는 경우가 많습니다. 탁기가 있기 때문에 메이크업, 헤어 모두 톤 다운된 쿨한 컬러가 잘 받습니다.',
+        palette: [
+            { color: '#C8A2C8', name: '라일락' },
+            { color: '#D8BFD8', name: '시슬' },
+            { color: '#B0A4B8', name: '그레이퍼플' },
+            { color: '#A0B2C6', name: '더스티블루' },
+            { color: '#C0B8C8', name: '그레이시라벤더' },
+            { color: '#B8A9C9', name: '소프트퍼플' },
+            { color: '#C4B7A6', name: '그레이시베이지' },
+            { color: '#A8B5C8', name: '스틸블루' },
+            { color: '#D4C4D9', name: '소프트라일락' },
+            { color: '#B5C4B1', name: '세이지' }
+        ],
+        bestColors: [
+            { color: '#C8A2C8', name: '라벤더' },
+            { color: '#FFB6C1', name: '밝은핑크' },
+            { color: '#B0A4B8', name: '회보라' },
+            { color: '#D4A0A0', name: '말린장미' },
+            { color: '#A8B5C8', name: '더스티블루' }
+        ],
+        worstColors: [
+            { color: '#FF4500', name: '비비드오렌지' },
+            { color: '#FFD700', name: '옐로우골드' },
+            { color: '#FF0000', name: '순수레드' }
+        ],
+        lipColors: ['라벤더', '밝은 핑크', '회보라', '말린 장미', '모브핑크'],
+        tips: [
+            '파운데이션은 그레이시한 핑크 베이스가 자연스러워요',
+            '아이섀도우는 라벤더, 모브, 그레이시핑크가 분위기 있어요',
+            '블러셔는 말린 장미색이나 더스티 로즈가 잘 어울려요',
+            '헤어 컬러는 애쉬 브라운, 애쉬 그레이가 추천됩니다',
+            '톤 다운된 파스텔 의상이 차분한 매력을 살려줘요'
+        ]
+    },
+    fallMute: {
+        id: 'fallMute',
+        season: 'fall',
+        seasonKr: '가을',
+        name: '가을 뮤트',
+        nameEn: 'Fall Mute',
+        keywords: ['차분한', '고급스러운', '부드러운', '편안한', '어른스러운', '우아한'],
+        description: '가을 뮤트 타입은 차분하고 무거운 분위기의 부드러운 컬러가 어울리며, 전반적으로 고급스럽고 강하면서도 편안한 느낌을 줍니다. 부드러운 인상 속에 우아한 분위기를 풍기며 어른스럽고 차분한 이미지입니다.',
+        characteristics: '라이트 그레이시 톤, 소프트 톤, 그레이시 톤으로 구성되며 중채도 및 중명도 범주의 색상이 어울립니다. 톤 다운된 웜톤 컬러들이 가장 잘 맞습니다.',
+        palette: [
+            { color: '#C4A882', name: '오트밀' },
+            { color: '#D2B48C', name: '탄' },
+            { color: '#DEB887', name: '벌리우드' },
+            { color: '#BC8F8F', name: '로지브라운' },
+            { color: '#BDB76B', name: '다크카키' },
+            { color: '#C9B8A0', name: '샌드' },
+            { color: '#A0826D', name: '코코아' },
+            { color: '#D4A574', name: '카멜' },
+            { color: '#8FBC8B', name: '세이지' },
+            { color: '#C0A98A', name: '아몬드' }
+        ],
+        bestColors: [
+            { color: '#C4A882', name: '오트밀' },
+            { color: '#FFFFF0', name: '아이보리' },
+            { color: '#E07A5F', name: '인디코랄' },
+            { color: '#808000', name: '올리브' },
+            { color: '#BDB76B', name: '밝은카키' }
+        ],
+        worstColors: [
+            { color: '#FF4500', name: '쨍한오렌지' },
+            { color: '#FF0000', name: '순수레드' },
+            { color: '#0000FF', name: '로얄블루' }
+        ],
+        lipColors: ['채도 낮은 코랄핑크', '무화과', '톤 다운 베이지', '말린 장미', '인디코랄'],
+        tips: [
+            '파운데이션은 따뜻한 베이지 톤이 자연스러워요',
+            '아이섀도우는 브라운, 카키, 골드 베이지가 고급스러워요',
+            '블러셔는 코랄 베이지나 인디코랄이 편안한 느낌을 줘요',
+            '헤어 컬러는 다크 브라운, 초콜릿 브라운이 추천됩니다',
+            '의상은 베이지, 카키, 올리브 계열이 분위기 있어요'
+        ]
+    },
+    fallStrong: {
+        id: 'fallStrong',
+        season: 'fall',
+        seasonKr: '가을',
+        name: '가을 스트롱',
+        nameEn: 'Fall Strong',
+        keywords: ['화려한', '분위기', '또렷한', '무난한', '구애받지않는', '풍요로운'],
+        description: '가을 스트롱 타입은 화려함과 분위기를 모두 아우르는 풍요로운 특성을 가지고 있으며, 가을의 중심에 위치한 톤입니다. 중명도의 고채도 색상이 특징으로, 채도가 중요한 톤입니다.',
+        characteristics: '웜하면서도 높은 채도의 색상까지 소화 가능하며, 광범위한 컬러 스펙트럼을 활용할 수 있습니다. 생동감 있고 화려한 가을 색상이 가장 잘 어울립니다.',
+        palette: [
+            { color: '#B22222', name: '파이어브릭' },
+            { color: '#DAA520', name: '골든로드' },
+            { color: '#CD853F', name: '페루' },
+            { color: '#D2691E', name: '초콜릿' },
+            { color: '#8B4513', name: '새들브라운' },
+            { color: '#A0522D', name: '시에나' },
+            { color: '#CC5500', name: '번트오렌지' },
+            { color: '#B8860B', name: '다크골든로드' },
+            { color: '#6B8E23', name: '올리브드랩' },
+            { color: '#C04000', name: '마호가니' }
+        ],
+        bestColors: [
+            { color: '#B22222', name: '클래식레드' },
+            { color: '#FF7F50', name: '오렌지코랄' },
+            { color: '#8B0000', name: '딥레드' },
+            { color: '#FF6347', name: '토마토' },
+            { color: '#DAA520', name: '머스타드' }
+        ],
+        worstColors: [
+            { color: '#E6E6FA', name: '라벤더' },
+            { color: '#FFB6C1', name: '파스텔핑크' },
+            { color: '#ADD8E6', name: '라이트블루' }
+        ],
+        lipColors: ['클래식 레드', '오렌지 코랄', '딥 레드', '토마토', '브릭 레드'],
+        tips: [
+            '파운데이션은 웜톤 베이지~옐로우 베이스가 자연스러워요',
+            '아이섀도우는 골드, 브론즈, 카퍼 계열이 화려해요',
+            '블러셔는 오렌지 코랄이나 브릭 계열이 잘 어울려요',
+            '헤어 컬러는 카퍼 브라운, 오렌지 브라운이 추천됩니다',
+            '의상은 머스타드, 테라코타, 올리브 그린이 분위기 있어요'
+        ]
+    },
+    fallDeep: {
+        id: 'fallDeep',
+        season: 'fall',
+        seasonKr: '가을',
+        name: '가을 딥',
+        nameEn: 'Fall Deep',
+        keywords: ['깊은', '클래식', '섹시한', '그윽한', '관능적인', '고급진'],
+        description: '가을 딥 타입은 중간~어두운 밝기의 피부에 진하고 강한 눈동자와 머리카락을 가진 사람들이 해당하며, 화려하고 고급진 인상을 연출합니다. 채도 높은 원색에 검은색이 섞인 듯 깊고 그윽한 색감이 어울립니다.',
+        characteristics: '다크 그레이시 톤, 다크 톤, 딥 톤으로 구성되며, 중채도에 저명도의 강렬한 색상이 적합합니다. 저채도 고명도의 파스텔 계열은 피하는 것이 좋습니다.',
+        palette: [
+            { color: '#800020', name: '버건디' },
+            { color: '#4A0000', name: '다크레드' },
+            { color: '#654321', name: '다크브라운' },
+            { color: '#2F4F2F', name: '다크그린' },
+            { color: '#4B0082', name: '인디고' },
+            { color: '#3C1414', name: '딥와인' },
+            { color: '#5C4033', name: '다크초콜릿' },
+            { color: '#36454F', name: '차콜' },
+            { color: '#704214', name: '세피아' },
+            { color: '#483C32', name: '다크토프' }
+        ],
+        bestColors: [
+            { color: '#8B0000', name: '톤다운레드' },
+            { color: '#800020', name: '버건디브라운' },
+            { color: '#A52A2A', name: '브릭레드' },
+            { color: '#6B3A2A', name: '브릭브라운' },
+            { color: '#2F4F2F', name: '딥그린' }
+        ],
+        worstColors: [
+            { color: '#FFB6C1', name: '파스텔핑크' },
+            { color: '#E6E6FA', name: '라벤더' },
+            { color: '#ADD8E6', name: '라이트블루' }
+        ],
+        lipColors: ['톤 다운 레드', '버건디 브라운', '브릭 레드', '브릭 브라운', '와인레드'],
+        tips: [
+            '파운데이션은 따뜻한 옐로우 베이지가 피부와 잘 맞아요',
+            '아이섀도우는 다크 브라운, 카키, 보르도가 깊은 눈매를 연출해요',
+            '블러셔는 브릭 레드나 딥 코랄이 자연스러워요',
+            '헤어 컬러는 딥 브라운, 에스프레소가 추천됩니다',
+            '의상은 버건디, 카멜, 다크올리브가 고급스러워요'
+        ]
+    },
+    winterBright: {
+        id: 'winterBright',
+        season: 'winter',
+        seasonKr: '겨울',
+        name: '겨울 브라이트',
+        nameEn: 'Winter Bright',
+        keywords: ['선명한', '맑은', '과감한', '희귀한', '시원한', '세련된'],
+        description: '겨울 브라이트 타입은 차갑고 강렬하며 이지적인 느낌을 지니고 있으며 깔끔하고 세련된 이미지를 가진 유형입니다. 피부색이 밝고 붉은 기가 있으며, 도시적인 인상에 뚜렷한 이목구비와 눈동자가 특징입니다.',
+        characteristics: '스트롱 톤과 비비드 톤으로 구성되어 있으며, 비비드한 컬러, 네온컬러, 푸시아 컬러 같은 인공적인 색감까지 소화 가능합니다. 깔끔하고 선명한 메이크업이 잘 어울립니다.',
+        palette: [
+            { color: '#FF0050', name: '비비드핑크' },
+            { color: '#0000FF', name: '퓨어블루' },
+            { color: '#FF00FF', name: '마젠타' },
+            { color: '#00FF00', name: '네온그린' },
+            { color: '#FFFF00', name: '옐로우' },
+            { color: '#FF1493', name: '딥핑크' },
+            { color: '#0080FF', name: '아주르' },
+            { color: '#8B008B', name: '다크마젠타' },
+            { color: '#E91E63', name: '체리핑크' },
+            { color: '#00BCD4', name: '시안' }
+        ],
+        bestColors: [
+            { color: '#FF00FF', name: '푸시아' },
+            { color: '#DC143C', name: '체리레드' },
+            { color: '#FF1493', name: '자줏빛핑크' },
+            { color: '#8B008B', name: '플럼' },
+            { color: '#000000', name: '블랙' }
+        ],
+        worstColors: [
+            { color: '#DEB887', name: '베이지' },
+            { color: '#BDB76B', name: '카키' },
+            { color: '#D2B48C', name: '탄' }
+        ],
+        lipColors: ['푸시아', '체리 레드', '자줏빛 핑크', '플럼', '쿨 레드'],
+        tips: [
+            '파운데이션은 핑크 베이스의 밝은 톤이 깔끔해요',
+            '아이섀도우는 실버, 그레이, 비비드 컬러가 세련되어요',
+            '블러셔는 쿨 핑크나 푸시아 톤이 선명한 인상을 줘요',
+            '헤어 컬러는 블루블랙, 다크 애쉬가 추천됩니다',
+            '번지는 음영보다 정확하고 선명한 라인의 메이크업이 좋아요'
+        ]
+    },
+    winterDeep: {
+        id: 'winterDeep',
+        season: 'winter',
+        seasonKr: '겨울',
+        name: '겨울 딥',
+        nameEn: 'Winter Deep',
+        keywords: ['깊은', '시크한', '도도한', '섹시한', '그윽한', '강렬한'],
+        description: '겨울 딥 타입은 가을 딥과 유사하나 더욱 화사하고 차가우며, 밝은 색과 어두운 색의 명도 차이가 큰 것이 특징입니다. 인상이 깊고 강렬한 하드한 이미지를 소유하고 있습니다.',
+        characteristics: '다크 그레이시 톤, 다크 톤, 딥 톤으로 구성되어 있으며, 채도가 낮고 어두운 와인, 퍼플, 딥 레드 등의 쿨톤 계열이 잘 어울립니다. 무겁지만 쿨한 컬러와 무채색이 최적입니다.',
+        palette: [
+            { color: '#191970', name: '미드나잇블루' },
+            { color: '#4B0082', name: '인디고' },
+            { color: '#2F4F4F', name: '다크슬레이트' },
+            { color: '#800000', name: '마룬' },
+            { color: '#36454F', name: '차콜' },
+            { color: '#301934', name: '다크퍼플' },
+            { color: '#1C1C1C', name: '제트블랙' },
+            { color: '#483D8B', name: '다크슬레이트블루' },
+            { color: '#2C2C54', name: '딥네이비' },
+            { color: '#4A235A', name: '딥퍼플' }
+        ],
+        bestColors: [
+            { color: '#8E4585', name: '자두핑크' },
+            { color: '#C71585', name: '핑크레드' },
+            { color: '#996666', name: '너티로즈' },
+            { color: '#722F37', name: '포도와인' },
+            { color: '#8B0000', name: '톤다운레드' }
+        ],
+        worstColors: [
+            { color: '#FFD700', name: '골드' },
+            { color: '#FFA500', name: '오렌지' },
+            { color: '#FFDAB9', name: '피치' }
+        ],
+        lipColors: ['자두 핑크', '핑크 레드', '너티 로즈', '포도 와인', '톤 다운 레드'],
+        tips: [
+            '파운데이션은 뉴트럴~쿨 베이지가 피부를 정돈해줘요',
+            '아이섀도우는 다크 그레이, 네이비, 딥 퍼플이 깊은 눈매를 만들어요',
+            '블러셔는 와인 로즈나 딥 플럼이 자연스러워요',
+            '헤어 컬러는 블루블랙, 다크 애쉬 브라운이 추천됩니다',
+            '의상은 블랙, 네이비, 차콜, 딥퍼플이 시크한 매력을 살려요'
+        ]
+    }
+};
