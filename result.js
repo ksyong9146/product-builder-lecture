@@ -46,6 +46,15 @@
             <p class="result-description" style="margin-top:0.8rem;">${data.characteristics}</p>
         </div>
 
+        <!-- How To Use -->
+        <div class="result-card fade-in fade-in-delay-2">
+            <h3>
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v12M12 17h.01"/></svg>
+                일상에서 활용하기
+            </h3>
+            <p class="result-description">${data.howto}</p>
+        </div>
+
         <!-- Color Palette -->
         <div class="result-card fade-in fade-in-delay-2">
             <h3>
@@ -118,6 +127,7 @@
             </h3>
             <ul class="tip-list">
                 ${data.tips.map(t => `<li>${t}</li>`).join('')}
+                <li style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-muted);">* 최종 업데이트: 2026년 2월</li>
             </ul>
         </div>
 
