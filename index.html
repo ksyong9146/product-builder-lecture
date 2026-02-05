@@ -269,6 +269,28 @@
                 </ol>
             </div>
         </section>
+
+        <!-- Viral CTA Section -->
+        <section class="viral-cta" aria-labelledby="viral-heading">
+            <div class="viral-cta-inner fade-in">
+                <div class="viral-cta-badge" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    친구에게 공유
+                </div>
+                <h2 id="viral-heading">친구와 함께 퍼스널 컬러를<br>비교해보세요!</h2>
+                <p>진단 결과를 공유하고 친구들의 퍼스널 컬러도 확인해보세요.<br>같은 컬러 타입인 친구가 있을지도 몰라요!</p>
+                <div class="viral-cta-actions">
+                    <a href="/diagnosis.html" class="viral-share-btn primary" aria-label="무료 진단 시작하기">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        무료 진단 시작하기
+                    </a>
+                    <button class="viral-share-btn" id="home-copy-link" aria-label="링크 복사하기">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                        링크 복사하기
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -277,5 +299,35 @@
     </footer>
 
     <script src="main.js"></script>
+    <script>
+    (function() {
+        var btn = document.getElementById('home-copy-link');
+        if (!btn) return;
+        btn.addEventListener('click', async function() {
+            try {
+                await navigator.clipboard.writeText('https://imcolor.space/');
+                btn.querySelector('svg').style.display = 'none';
+                var orig = btn.textContent;
+                btn.textContent = '복사 완료!';
+                setTimeout(function() {
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> 링크 복사하기';
+                }, 2000);
+            } catch(e) {
+                var t = document.createElement('textarea');
+                t.value = 'https://imcolor.space/';
+                t.style.position = 'fixed';
+                t.style.opacity = '0';
+                document.body.appendChild(t);
+                t.select();
+                document.execCommand('copy');
+                document.body.removeChild(t);
+                btn.textContent = '복사 완료!';
+                setTimeout(function() {
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> 링크 복사하기';
+                }, 2000);
+            }
+        });
+    })();
+    </script>
 </body>
 </html>
